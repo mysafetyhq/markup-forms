@@ -43,6 +43,7 @@
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      margin-bottom: 10px; /* Space between items */
     }
 
     li a {
@@ -65,7 +66,19 @@
       display: block;
       margin: 20px auto;
     }
+    
+    @media only screen and (min-width: 768px) {
+      li {
+        width: calc(100% / 3 - 20px); /* Three columns on tablets and desktops */
+        margin-bottom: 20px; /* Adjust margin as needed */
+      }
+
+      li p {
+        margin-bottom: 0; /* No margin below description on larger screens */
+      }
+    }
   </style>
+
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
